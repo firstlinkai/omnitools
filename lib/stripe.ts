@@ -1,10 +1,21 @@
 import Stripe from "stripe";
 
 /**
- * Server-only Stripe client. The secret key comes from the environment
- * (.env.local in dev — gitignored). Never import this into a client component.
+ * Lazily-constructed, server-only Stripe client. Constructing Stripe with an
+ * empty key throws, so we must NOT build it at module load (that would crash the
+ * production build while Premium is parked and no key is set). Call getStripe()
+ * only after isStripeConfigured() passes — i.e. inside a request handler.
  */
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "");
+let client: Stripe | null = null;
+
+export function getStripe(): Stripe {
+  if (!client) {
+    const key = process.env.STRIPE_SECRET_KEY;
+    if (!key) throw new Error("STRIPE_SECRET_KEY is not set.");
+    client = new Stripe(key);
+  }
+  return client;
+}
 
 export function isStripeConfigured(): boolean {
   return Boolean(process.env.STRIPE_SECRET_KEY);

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { stripe, isStripeConfigured, PREMIUM_UNIT_AMOUNT } from "@/lib/stripe";
+import { getStripe, isStripeConfigured, PREMIUM_UNIT_AMOUNT } from "@/lib/stripe";
 
 // Stripe's Node SDK needs the Node.js runtime (not edge).
 export const runtime = "nodejs";
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   const base = process.env.NEXT_PUBLIC_APP_URL ?? new URL(req.url).origin;
 
   try {
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: "subscription",
       line_items: [
         {
