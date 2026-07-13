@@ -7,6 +7,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   Search,
+  Tag,
   Wrench,
   X,
 } from "lucide-react";
@@ -96,6 +97,19 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           <SidebarNav collapsed={collapsed} />
         </div>
+        <div className="border-t border-border p-2">
+          <Link
+            href="/pricing"
+            title={collapsed ? "Pricing" : undefined}
+            className={cn(
+              "flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
+              collapsed && "justify-center px-0 py-2",
+            )}
+          >
+            <Tag className="h-4 w-4 shrink-0" aria-hidden />
+            {!collapsed && <span>Pricing</span>}
+          </Link>
+        </div>
       </aside>
 
       {/* Mobile drawer */}
@@ -115,6 +129,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto pt-3">
               <SidebarNav onNavigate={closeDrawer} />
+            </div>
+            <div className="border-t border-border p-2">
+              <Link
+                href="/pricing"
+                onClick={closeDrawer}
+                className="flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                <Tag className="h-4 w-4 shrink-0" aria-hidden />
+                <span>Pricing</span>
+              </Link>
             </div>
           </div>
         </div>
