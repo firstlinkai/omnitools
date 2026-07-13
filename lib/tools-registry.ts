@@ -246,7 +246,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Type,
     keywords: ["video", "text", "caption", "title", "subtitle", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Upload a clip and type your caption",
@@ -277,7 +276,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: AudioLines,
     keywords: ["audio", "trim", "cut", "mp3", "wav", "ffmpeg"],
-    status: "soon",
     engine: "Web Audio API & FFmpeg",
     wireframe: [
       "Load audio and set the range on a waveform",
@@ -292,7 +290,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: Volume2,
     keywords: ["audio", "volume", "gain", "normalize", "loud", "quiet"],
-    status: "soon",
     engine: "Web Audio API & FFmpeg",
     wireframe: [
       "Import a track and drag the gain control",
@@ -307,7 +304,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: Gauge,
     keywords: ["audio", "speed", "tempo", "fast", "slow", "playback"],
-    status: "soon",
     engine: "Web Audio API & FFmpeg",
     wireframe: [
       "Load a track and choose a tempo multiplier",
@@ -322,7 +318,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: Waves,
     keywords: ["audio", "pitch", "semitone", "key", "shift", "tune"],
-    status: "soon",
     engine: "Web Audio API & FFmpeg",
     wireframe: [
       "Import audio and pick a semitone offset",
@@ -337,7 +332,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: SlidersHorizontal,
     keywords: ["audio", "equalizer", "eq", "bass", "treble", "bands"],
-    status: "soon",
     engine: "Web Audio API",
     wireframe: [
       "Load a track and adjust the frequency-band sliders",
@@ -352,7 +346,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: Rewind,
     keywords: ["audio", "reverse", "backwards", "reversed", "effect"],
-    status: "soon",
     engine: "Web Audio API",
     wireframe: [
       "Import an audio file",
@@ -367,7 +360,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio Processing Laboratory",
     icon: ListMusic,
     keywords: ["audio", "join", "merge", "concat", "combine", "playlist"],
-    status: "soon",
     engine: "Web Audio API & FFmpeg",
     wireframe: [
       "Drop several audio files and order them",
@@ -393,7 +385,6 @@ export const TOOLS: ToolDef[] = [
     category: "Capture Recorders",
     icon: Video,
     keywords: ["webcam", "camera", "record", "video", "getUserMedia"],
-    status: "soon",
     engine: "Browser MediaRecorder API",
     wireframe: [
       "Grant camera + mic access and pick a device",
@@ -446,7 +437,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: Unlock,
     keywords: ["pdf", "unlock", "password", "decrypt", "remove protection"],
-    status: "soon",
     engine: "pdf-lib & pdfjs-dist",
     wireframe: [
       "Upload a password-protected PDF and enter the password",
@@ -494,7 +484,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileType,
     keywords: ["pdf", "word", "docx", "convert", "extract", "text"],
-    status: "soon",
     engine: "pdfjs-dist & docx",
     wireframe: [
       "Upload a PDF",
@@ -509,7 +498,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileSpreadsheet,
     keywords: ["pdf", "excel", "xlsx", "table", "convert", "spreadsheet"],
-    status: "soon",
     engine: "pdfjs-dist & SheetJS",
     wireframe: [
       "Upload a PDF that contains tables",
@@ -542,7 +530,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: Braces,
     keywords: ["pdf", "html", "web", "convert", "export", "markup"],
-    status: "soon",
     engine: "pdfjs-dist",
     wireframe: [
       "Upload a PDF",
@@ -557,7 +544,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileText,
     keywords: ["word", "docx", "pdf", "convert", "document"],
-    status: "soon",
     engine: "docx-preview & pdf-lib",
     wireframe: [
       "Upload a .docx file",
@@ -572,7 +558,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileSpreadsheet,
     keywords: ["excel", "xlsx", "pdf", "convert", "spreadsheet", "table"],
-    status: "soon",
     engine: "SheetJS & pdf-lib",
     wireframe: [
       "Upload an .xlsx workbook",
@@ -587,7 +572,6 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: Presentation,
     keywords: ["powerpoint", "pptx", "pdf", "convert", "slides", "deck"],
-    status: "soon",
     engine: "Client-side parser & pdf-lib",
     wireframe: [
       "Upload a .pptx deck",
@@ -622,7 +606,6 @@ export const TOOLS: ToolDef[] = [
     category: "Format Transformers & Archive Utilities",
     icon: Music,
     keywords: ["audio", "convert", "mp3", "wav", "ogg", "m4a", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Drop an audio file and choose a target format",
@@ -637,7 +620,6 @@ export const TOOLS: ToolDef[] = [
     category: "Format Transformers & Archive Utilities",
     icon: Images,
     keywords: ["image", "convert", "png", "jpg", "webp", "format"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image and pick a target format",
@@ -652,7 +634,6 @@ export const TOOLS: ToolDef[] = [
     category: "Format Transformers & Archive Utilities",
     icon: FileType,
     keywords: ["document", "convert", "docx", "txt", "markdown", "format"],
-    status: "soon",
     engine: "Client-side parsers",
     wireframe: [
       "Upload a document and choose a target format",
