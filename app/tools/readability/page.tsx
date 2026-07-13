@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { ReadabilityClient } from "./readability-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Readability Analyzer",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="readability">
+    <ToolPage slug="readability" content={content}>
       <ReadabilityClient />
     </ToolPage>
   );

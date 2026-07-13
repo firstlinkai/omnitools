@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { FlashcardsClient } from "./flashcards-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Flashcard Studio",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="flashcards">
+    <ToolPage slug="flashcards" content={content}>
       <FlashcardsClient />
     </ToolPage>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { PdfToImagesClient } from "../_shared/pdf-to-images-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "PDF to PNG",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="pdf-to-png">
+    <ToolPage slug="pdf-to-png" content={content}>
       <PdfToImagesClient format="image/png" ext="png" />
     </ToolPage>
   );

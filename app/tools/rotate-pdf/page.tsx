@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { RotatePdfClient } from "./rotate-pdf-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Rotate PDF",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="rotate-pdf">
+    <ToolPage slug="rotate-pdf" content={content}>
       <RotatePdfClient />
     </ToolPage>
   );

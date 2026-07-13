@@ -1,15 +1,21 @@
 import { getTool } from "@/lib/tools-registry";
+import type { ToolContent } from "@/lib/tool-content";
 import { Badge } from "@/components/ui/badge";
+import { ToolContentSections } from "./tool-content";
 
 /**
- * Standard chrome for every tool page: icon, name, subtitle, category.
- * Reads everything from the registry so tool pages stay minimal.
+ * Standard chrome for every tool page: icon, name, subtitle, category, the tool
+ * itself, and (optionally) the long-form content sections beneath it. Reads
+ * everything else from the registry so tool pages stay minimal.
  */
 export function ToolPage({
   slug,
+  content,
   children,
 }: {
   slug: string;
+  /** Long-form page content rendered below the tool (what it does, steps, FAQ). */
+  content?: ToolContent;
   children: React.ReactNode;
 }) {
   const tool = getTool(slug);
@@ -31,6 +37,7 @@ export function ToolPage({
         </div>
       </header>
       {children}
+      {content && <ToolContentSections tool={tool} content={content} />}
     </div>
   );
 }

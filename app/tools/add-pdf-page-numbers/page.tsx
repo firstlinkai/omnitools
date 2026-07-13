@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { AddPageNumbersClient } from "./add-page-numbers-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Add Page Numbers",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="add-pdf-page-numbers">
+    <ToolPage slug="add-pdf-page-numbers" content={content}>
       <AddPageNumbersClient />
     </ToolPage>
   );

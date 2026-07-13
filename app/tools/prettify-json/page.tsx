@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { PrettifyJsonClient } from "./prettify-json-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Prettify JSON",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="prettify-json">
+    <ToolPage slug="prettify-json" content={content}>
       <PrettifyJsonClient />
     </ToolPage>
   );

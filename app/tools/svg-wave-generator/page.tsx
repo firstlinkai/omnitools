@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { WaveClient } from "./wave-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "SVG Wave Generator",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="svg-wave-generator">
+    <ToolPage slug="svg-wave-generator" content={content}>
       <WaveClient />
     </ToolPage>
   );

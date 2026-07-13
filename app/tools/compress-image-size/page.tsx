@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { CompressImageSizeClient } from "./compress-image-size-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Compress Image Size",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="compress-image-size">
+    <ToolPage slug="compress-image-size" content={content}>
       <CompressImageSizeClient />
     </ToolPage>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { AddTextToVideoClient } from "./add-text-to-video-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Add Text to Video",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="add-text-to-video">
+    <ToolPage slug="add-text-to-video" content={content}>
       <AddTextToVideoClient />
     </ToolPage>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { CompressPdfClient } from "./compress-pdf-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Compress PDF",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="compress-pdf">
+    <ToolPage slug="compress-pdf" content={content}>
       <CompressPdfClient />
     </ToolPage>
   );

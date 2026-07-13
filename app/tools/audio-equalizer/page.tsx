@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { AudioEqualizerClient } from "./audio-equalizer-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Equalizer",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="audio-equalizer">
+    <ToolPage slug="audio-equalizer" content={content}>
       <AudioEqualizerClient />
     </ToolPage>
   );

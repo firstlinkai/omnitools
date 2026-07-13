@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { VoiceRecorderClient } from "./voice-recorder-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Voice Recorder",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="voice-recorder">
+    <ToolPage slug="voice-recorder" content={content}>
       <VoiceRecorderClient />
     </ToolPage>
   );

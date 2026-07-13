@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { GifSpeedClient } from "./gif-speed-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Change GIF Speed",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="gif-speed">
+    <ToolPage slug="gif-speed" content={content}>
       <GifSpeedClient />
     </ToolPage>
   );

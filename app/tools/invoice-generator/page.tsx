@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { InvoiceGeneratorClient } from "./invoice-generator-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Invoice Generator",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="invoice-generator">
+    <ToolPage slug="invoice-generator" content={content}>
       <InvoiceGeneratorClient />
     </ToolPage>
   );

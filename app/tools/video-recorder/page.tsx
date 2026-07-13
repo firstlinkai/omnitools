@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { VideoRecorderClient } from "./video-recorder-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Video Recorder",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="video-recorder">
+    <ToolPage slug="video-recorder" content={content}>
       <VideoRecorderClient />
     </ToolPage>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { KeyframeClient } from "./keyframe-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "CSS Keyframe Builder",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="css-keyframe-builder">
+    <ToolPage slug="css-keyframe-builder" content={content}>
       <KeyframeClient />
     </ToolPage>
   );

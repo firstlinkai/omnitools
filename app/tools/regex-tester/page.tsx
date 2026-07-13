@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { RegexTesterClient } from "./regex-tester-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "RegEx Tester",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="regex-tester">
+    <ToolPage slug="regex-tester" content={content}>
       <RegexTesterClient />
     </ToolPage>
   );

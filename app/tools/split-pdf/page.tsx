@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { SplitPdfClient } from "./split-pdf-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Split PDF",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="split-pdf">
+    <ToolPage slug="split-pdf" content={content}>
       <SplitPdfClient />
     </ToolPage>
   );

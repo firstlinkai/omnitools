@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { AudioConverterClient } from "./audio-converter-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Audio Converter",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="audio-converter">
+    <ToolPage slug="audio-converter" content={content}>
       <AudioConverterClient />
     </ToolPage>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { ChangeVideoSpeedClient } from "./change-video-speed-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Change Video Speed",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="change-video-speed">
+    <ToolPage slug="change-video-speed" content={content}>
       <ChangeVideoSpeedClient />
     </ToolPage>
   );

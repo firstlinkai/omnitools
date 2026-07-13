@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { VideoConverterClient } from "./video-converter-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Video Converter",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="video-converter">
+    <ToolPage slug="video-converter" content={content}>
       <VideoConverterClient />
     </ToolPage>
   );

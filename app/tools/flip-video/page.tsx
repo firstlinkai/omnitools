@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ToolPage } from "@/components/tool/tool-page";
 import { FlipVideoClient } from "./flip-video-client";
+import content from "./content";
 
 export const metadata: Metadata = {
   title: "Flip Video",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ToolPage slug="flip-video">
+    <ToolPage slug="flip-video" content={content}>
       <FlipVideoClient />
     </ToolPage>
   );
