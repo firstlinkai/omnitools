@@ -30,11 +30,13 @@ export default function DashboardPage() {
       {/* Intro */}
       <div className="max-w-2xl">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          {LIVE_TOOL_COUNT} tools. Zero uploads.
+          One tab. Every utility. Zero uploads.
         </h1>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-          Format data, generate assets, edit media, and run your paperwork,
-          all inside this tab. Nothing you paste or drop here ever leaves your device.
+          Edit video and audio, record your screen, wrangle PDFs, convert
+          formats, and run your paperwork — {LIVE_TOOL_COUNT} tools live now,
+          more landing every week. Everything runs in your browser; nothing you
+          drop here ever leaves your device.
         </p>
       </div>
 

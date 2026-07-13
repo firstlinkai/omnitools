@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Cpu, Hammer, Sparkles } from "lucide-react";
+import { ArrowRight, Bell, Check, Cpu, FlaskConical, Sparkles } from "lucide-react";
 import { getTool } from "@/lib/tools-registry";
 import { Panel } from "@/components/tool/panel";
 import { Button } from "@/components/ui/button";
@@ -24,9 +24,10 @@ function readWaitlist(): Waitlist {
 /**
  * Shared placeholder view for every unbuilt tool. It reads the active tool's
  * metadata straight from the registry — name, engine, and the wireframe schema —
- * renders a blueprint of what the tool will do, and collects priority-waitlist
- * interest. True to the privacy value prop, the "signup" is stored only in this
- * browser's localStorage; nothing is transmitted anywhere.
+ * renders a blueprint of what the tool will do, and collects "notify me"
+ * interest for when the tool leaves internal beta. True to the privacy value
+ * prop, the signup is stored only in this browser's localStorage; nothing is
+ * transmitted anywhere.
  */
 export function ComingSoonTool({ slug }: { slug: string }) {
   const tool = getTool(slug);
@@ -72,8 +73,8 @@ export function ComingSoonTool({ slug }: { slug: string }) {
         title="Wireframe preview"
         actions={
           <Badge>
-            <Hammer className="h-3 w-3" aria-hidden />
-            In development
+            <FlaskConical className="h-3 w-3" aria-hidden />
+            Internal beta
           </Badge>
         }
         bodyClassName="p-4"
@@ -111,8 +112,8 @@ export function ComingSoonTool({ slug }: { slug: string }) {
         </p>
       </Panel>
 
-      {/* Priority waitlist */}
-      <Panel title="Priority waitlist" bodyClassName="p-4">
+      {/* Notify-me signup */}
+      <Panel title="Get notified" bodyClassName="p-4">
         {joined ? (
           <div className="flex flex-col items-start gap-2">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-muted/60">
@@ -141,8 +142,9 @@ export function ComingSoonTool({ slug }: { slug: string }) {
         ) : (
           <form onSubmit={join} className="flex flex-col gap-3">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Want <span className="font-medium text-foreground">{tool.name}</span>{" "}
-              first? Join the priority waitlist and jump the queue when it ships.
+              <span className="font-medium text-foreground">{tool.name}</span> is
+              in internal beta. Drop your email to be notified the moment it goes
+              live.
             </p>
             <div className="flex flex-col gap-1.5">
               <Input
@@ -160,7 +162,8 @@ export function ComingSoonTool({ slug }: { slug: string }) {
               {error && <p className="text-xs text-danger">{error}</p>}
             </div>
             <Button type="submit" className="w-full">
-              Join the Priority Waitlist
+              <Bell className="h-4 w-4" aria-hidden />
+              Notify me when it&rsquo;s ready
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Button>
             <p className="text-[11px] leading-relaxed text-muted-foreground">
