@@ -2,35 +2,37 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Palette matched to FirstLink AI (firstlinkai.com): brand red on near-white
+   in light mode, brand gold on near-black in dark mode. */
 :root {
   --background: #fafafa;
-  --foreground: #18181b;
-  --card: #fdfdfd;
-  --card-foreground: #18181b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --accent: #059669;
-  --accent-foreground: #fdfdfd;
-  --accent-muted: #d1fae5;
-  --ring: #059669;
-  --danger: #dc2626;
+  --foreground: #141414;
+  --card: #ffffff;
+  --card-foreground: #141414;
+  --muted: #f3f4f6;
+  --muted-foreground: #4b5563;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --accent: #dc2626;
+  --accent-foreground: #ffffff;
+  --accent-muted: #fee2e2;
+  --ring: #dc2626;
+  --danger: #b91c1c;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #f4f4f5;
-  --card: #131316;
-  --card-foreground: #f4f4f5;
-  --muted: #1c1c20;
-  --muted-foreground: #a1a1aa;
-  --border: #27272a;
-  --input: #27272a;
-  --accent: #10b981;
-  --accent-foreground: #052e22;
-  --accent-muted: #064e3b;
-  --ring: #10b981;
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: #141414;
+  --card-foreground: #ffffff;
+  --muted: #1c1c1c;
+  --muted-foreground: #9ca3af;
+  --border: #262626;
+  --input: #262626;
+  --accent: #eab308;
+  --accent-foreground: #141414;
+  --accent-muted: #422006;
+  --ring: #eab308;
   --danger: #ef4444;
 }
 
