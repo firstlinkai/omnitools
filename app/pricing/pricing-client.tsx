@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Bell, Check, Minus, Sparkles } from "lucide-react";
+import { Check, Loader2, Minus, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import {
   PREMIUM_CHECKOUT_URL,
@@ -14,17 +13,6 @@ import {
   PRICING_ROWS,
   YEARLY_DISCOUNT,
 } from "@/lib/pricing";
-
-const WAITLIST_KEY = "omnitools:waitlist";
-
-function joinedAlready(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    return Boolean(JSON.parse(localStorage.getItem(WAITLIST_KEY) ?? "{}").premium);
-  } catch {
-    return false;
-  }
-}
 
 function Value({ v }: { v: string }) {
   if (v === "check")
@@ -36,29 +24,35 @@ function Value({ v }: { v: string }) {
 
 export function PricingClient() {
   const [yearly, setYearly] = useState(false);
-  const [email, setEmail] = useState("");
-  const [joined, setJoined] = useState(false);
-  const [showForm, setShowForm] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<"success" | "cancelled" | null>(null);
 
-  useEffect(() => setJoined(joinedAlready()), []);
+  // Surface the Stripe redirect result.
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get("checkout");
+    if (p === "success" || p === "cancelled") setNotice(p);
+  }, []);
 
-  const join = (e: React.FormEvent) => {
-    e.preventDefault();
-    const value = email.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      setError("Enter a valid email address.");
-      return;
-    }
-    try {
-      const list = JSON.parse(localStorage.getItem(WAITLIST_KEY) ?? "{}");
-      list.premium = value;
-      localStorage.setItem(WAITLIST_KEY, JSON.stringify(list));
-    } catch {
-      /* storage blocked — still confirm locally */
-    }
+  const startCheckout = async () => {
+    setLoading(true);
     setError(null);
-    setJoined(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ billing: yearly ? "yearly" : "monthly" }),
+      });
+      const data = (await res.json()) as { url?: string; error?: string };
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      throw new Error(data.error ?? "Could not start checkout.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not start checkout.");
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,10 +62,26 @@ export function PricingClient() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Pricing</h1>
         <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-muted-foreground">
           Every OmniTools tool is free, unlimited, and private — forever. Premium
-          is an optional tier in development that adds power features. No free
-          tool is ever limited.
+          is an optional tier that adds power features. No free tool is ever
+          limited.
         </p>
       </div>
+
+      {/* Redirect notice */}
+      {notice && (
+        <div
+          className={cn(
+            "mx-auto mt-6 max-w-md rounded-md border px-4 py-3 text-center text-sm",
+            notice === "success"
+              ? "border-accent/40 bg-accent-muted/30 text-foreground"
+              : "border-border bg-muted text-muted-foreground",
+          )}
+        >
+          {notice === "success"
+            ? "Test checkout completed. Once accounts + the webhook are wired, this will unlock Premium on your account."
+            : "Checkout cancelled — no charge was made."}
+        </div>
+      )}
 
       {/* Monthly / Yearly toggle */}
       <div className="mt-8 flex justify-center">
@@ -95,12 +105,7 @@ export function PricingClient() {
             )}
           >
             Yearly
-            <span
-              className={cn(
-                "text-[11px]",
-                yearly ? "text-accent-foreground/80" : "text-accent",
-              )}
-            >
+            <span className={cn("text-[11px]", yearly ? "text-accent-foreground/80" : "text-accent")}>
               −{Math.round(YEARLY_DISCOUNT * 100)}%
             </span>
           </button>
@@ -182,15 +187,16 @@ export function PricingClient() {
                 >
                   Get Premium
                 </a>
-              ) : joined ? (
-                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent">
-                  <Check className="h-3.5 w-3.5" aria-hidden />
-                  On the list
-                </span>
               ) : (
-                <Button size="sm" onClick={() => setShowForm((v) => !v)}>
-                  <Bell className="h-3.5 w-3.5" aria-hidden />
-                  Notify me
+                <Button size="sm" onClick={startCheckout} disabled={loading}>
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden />
+                      Redirecting
+                    </>
+                  ) : (
+                    "Get Premium"
+                  )}
                 </Button>
               )}
             </div>
@@ -198,34 +204,10 @@ export function PricingClient() {
         </div>
       </div>
 
-      {/* Waitlist form / honest note */}
-      {!PREMIUM_CHECKOUT_URL && !joined && showForm && (
-        <form onSubmit={join} className="mx-auto mt-5 flex max-w-sm flex-col gap-2">
-          <div className="flex gap-2">
-            <Input
-              type="email"
-              inputMode="email"
-              autoComplete="email"
-              placeholder="you@example.com"
-              aria-label="Email address"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                setError(null);
-              }}
-            />
-            <Button type="submit">
-              Join
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </Button>
-          </div>
-          {error && <p className="text-xs text-danger">{error}</p>}
-          <p className="text-[11px] leading-relaxed text-muted-foreground">
-            Premium isn&rsquo;t for sale yet — this just saves your interest in
-            this browser (no account, no charge, nothing uploaded) so we can tell
-            you when it launches.
-          </p>
-        </form>
+      {error && (
+        <p className="mx-auto mt-5 max-w-md rounded-md border border-danger/30 bg-danger/10 px-3 py-2 text-center text-sm text-danger">
+          {error}
+        </p>
       )}
 
       <p className="mx-auto mt-10 max-w-xl text-center text-xs leading-relaxed text-muted-foreground">
