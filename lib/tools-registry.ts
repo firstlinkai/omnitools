@@ -106,7 +106,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Combine,
     keywords: ["video", "merge", "join", "concat", "combine", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Drop several clips and drag them into playback order",
@@ -121,7 +120,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Crop,
     keywords: ["video", "crop", "frame", "aspect", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Load a video and drag a crop rectangle over the preview",
@@ -136,7 +134,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: RotateCw,
     keywords: ["video", "rotate", "orientation", "portrait", "landscape", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Upload a clip that was shot at the wrong angle",
@@ -151,7 +148,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: FlipHorizontal2,
     keywords: ["video", "flip", "mirror", "horizontal", "vertical", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Load a clip and choose a flip axis",
@@ -166,7 +162,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Scaling,
     keywords: ["video", "resize", "scale", "resolution", "1080p", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Import a clip and enter a target width/height or preset",
@@ -181,7 +176,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Repeat,
     keywords: ["video", "loop", "repeat", "boomerang", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Upload a short clip and set a loop count",
@@ -196,7 +190,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Volume2,
     keywords: ["video", "volume", "audio", "gain", "loud", "quiet", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Load a video and drag the gain slider",
@@ -211,7 +204,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Gauge,
     keywords: ["video", "speed", "slow motion", "timelapse", "fast", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Import a clip and choose a speed multiplier",
@@ -226,7 +218,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: Music,
     keywords: ["video", "audio", "music", "soundtrack", "voiceover", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Drop a video and an audio file",
@@ -241,7 +232,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: ImagePlus,
     keywords: ["video", "image", "watermark", "logo", "overlay", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Load a video and a PNG/JPG overlay",
@@ -271,7 +261,6 @@ export const TOOLS: ToolDef[] = [
     category: "Media & Video Studio",
     icon: FileVideo2,
     keywords: ["video", "convert", "mp4", "webm", "mov", "mkv", "ffmpeg"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Drop a video and pick a target container/codec",
