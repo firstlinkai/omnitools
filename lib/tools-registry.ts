@@ -448,13 +448,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileArchive,
     keywords: ["pdf", "compress", "optimize", "shrink", "size", "reduce"],
-    status: "soon",
-    engine: "pdf-lib & pdfjs-dist",
-    wireframe: [
-      "Upload a heavy PDF",
-      "Embedded images are re-encoded at a chosen quality via canvas",
-      "Rebuild with pdf-lib and download the smaller file",
-    ],
+    engine: "pdfjs-dist & pdf-lib",
   },
   {
     slug: "unlock-pdf",
@@ -493,13 +487,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: RotateCw,
     keywords: ["pdf", "rotate", "orientation", "landscape", "portrait", "scan"],
-    status: "soon",
     engine: "pdf-lib & pdfjs-dist",
-    wireframe: [
-      "Upload a PDF and preview each page",
-      "Rotate individual pages or the whole document",
-      "pdf-lib writes the corrected angles; download the result",
-    ],
   },
   {
     slug: "add-pdf-page-numbers",
@@ -508,13 +496,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: Hash,
     keywords: ["pdf", "page numbers", "pagination", "footer", "stamp", "bates"],
-    status: "soon",
     engine: "pdf-lib",
-    wireframe: [
-      "Upload a PDF and pick a position and starting number",
-      "pdf-lib draws the numbers on every page",
-      "Download the numbered PDF",
-    ],
   },
   {
     slug: "pdf-to-word",
@@ -553,13 +535,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileImage,
     keywords: ["pdf", "jpg", "jpeg", "image", "convert", "render"],
-    status: "soon",
     engine: "pdfjs-dist & Canvas",
-    wireframe: [
-      "Upload a PDF",
-      "pdfjs renders each page to a canvas",
-      "Export the pages as JPGs (zipped for multi-page)",
-    ],
   },
   {
     slug: "pdf-to-png",
@@ -568,13 +544,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: ImageIcon,
     keywords: ["pdf", "png", "image", "convert", "render", "lossless"],
-    status: "soon",
     engine: "pdfjs-dist & Canvas",
-    wireframe: [
-      "Upload a PDF",
-      "pdfjs rasterizes each page to a canvas at high DPI",
-      "Download the pages as PNGs",
-    ],
   },
   {
     slug: "pdf-to-html",
@@ -643,13 +613,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: ImageIcon,
     keywords: ["png", "pdf", "convert", "image", "combine", "pages"],
-    status: "soon",
     engine: "pdf-lib",
-    wireframe: [
-      "Drop one or more PNGs and order them",
-      "pdf-lib embeds each image as its own page",
-      "Download the assembled PDF",
-    ],
   },
   {
     slug: "jpg-to-pdf",
@@ -658,13 +622,7 @@ export const TOOLS: ToolDef[] = [
     category: "Advanced PDF & Document Management",
     icon: FileImage,
     keywords: ["jpg", "jpeg", "pdf", "convert", "image", "combine"],
-    status: "soon",
     engine: "pdf-lib",
-    wireframe: [
-      "Drop one or more JPGs and order them",
-      "pdf-lib embeds each photo as a page",
-      "Download the assembled PDF",
-    ],
   },
 
   // ── E · Format Transformers & Archive Utilities ─────────────────────
@@ -875,7 +833,11 @@ export function getTool(slug: string): ToolDef | undefined {
 }
 
 export function getToolsByCategory(category: ToolCategory): ToolDef[] {
-  return TOOLS.filter((t) => t.category === category);
+  // Live (working) tools rank above Coming Soon stubs; order is otherwise
+  // preserved (V8 sort is stable).
+  return TOOLS.filter((t) => t.category === category).sort(
+    (a, b) => (isLive(a) ? 0 : 1) - (isLive(b) ? 0 : 1),
+  );
 }
 
 export function isLive(tool: ToolDef): boolean {
