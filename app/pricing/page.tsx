@@ -4,7 +4,7 @@ import { PricingClient } from "./pricing-client";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "OmniTools is free and unlimited — every tool runs in your browser with no uploads, no ads, and no account. Premium power features are on the way.",
+    "OmniTools is completely free — every tool runs in your browser with unlimited use, no ads, no account, and no uploads.",
 };
 
 export default function Page() {
