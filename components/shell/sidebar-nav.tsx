@@ -50,7 +50,16 @@ export function SidebarNav({
                       className={cn("h-4 w-4 shrink-0", active && "text-accent")}
                       aria-hidden
                     />
-                    {!collapsed && <span className="truncate">{tool.name}</span>}
+                    {!collapsed && (
+                      <>
+                        <span className="truncate">{tool.name}</span>
+                        {tool.status === "soon" && (
+                          <span className="ml-auto shrink-0 rounded-full border border-border bg-muted px-1.5 py-px text-[9px] font-semibold uppercase tracking-wide text-muted-foreground">
+                            Soon
+                          </span>
+                        )}
+                      </>
+                    )}
                   </Link>
                 </li>
               );

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { TOOLS } from "@/lib/tools-registry";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 /**
@@ -90,7 +91,7 @@ export function CommandSearch({
                 go(results[active].slug);
               }
             }}
-            placeholder="Search 17 tools..."
+            placeholder={`Search ${TOOLS.length} tools...`}
             className="h-12 w-full bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
           />
           <kbd className="rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] text-muted-foreground">
@@ -118,8 +119,15 @@ export function CommandSearch({
                 >
                   <Icon className="h-4 w-4 shrink-0 text-accent" aria-hidden />
                   <span className="min-w-0">
-                    <span className="block truncate text-sm font-medium text-foreground">
-                      {tool.name}
+                    <span className="flex items-center gap-1.5">
+                      <span className="truncate text-sm font-medium text-foreground">
+                        {tool.name}
+                      </span>
+                      {tool.status === "soon" && (
+                        <Badge className="shrink-0 px-1.5 py-0 text-[9px] uppercase">
+                          Soon
+                        </Badge>
+                      )}
                     </span>
                     <span className="block truncate text-xs text-muted-foreground">
                       {tool.description}

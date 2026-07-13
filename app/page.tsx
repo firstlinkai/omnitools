@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ShieldCheck, Zap, HardDriveDownload } from "lucide-react";
-import { TOOL_CATEGORIES, getToolsByCategory } from "@/lib/tools-registry";
+import {
+  LIVE_TOOL_COUNT,
+  TOOL_CATEGORIES,
+  getToolsByCategory,
+} from "@/lib/tools-registry";
 
 const PRINCIPLES = [
   {
@@ -26,7 +30,7 @@ export default function DashboardPage() {
       {/* Intro */}
       <div className="max-w-2xl">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Seventeen tools. Zero uploads.
+          {LIVE_TOOL_COUNT} tools. Zero uploads.
         </h1>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           Format data, generate assets, edit media, and run your paperwork,
@@ -64,7 +68,14 @@ export default function DashboardPage() {
                     <Icon className="h-4.5 w-4.5 text-accent" aria-hidden />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-sm font-medium">{tool.name}</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-sm font-medium">{tool.name}</span>
+                      {tool.status === "soon" && (
+                        <span className="shrink-0 rounded-full border border-border bg-muted px-1.5 py-px text-[9px] font-semibold uppercase tracking-wide text-muted-foreground">
+                          Soon
+                        </span>
+                      )}
+                    </span>
                     <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                       {tool.description}
                     </span>
