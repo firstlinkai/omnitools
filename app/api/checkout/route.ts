@@ -5,7 +5,7 @@ import { getStripe, isStripeConfigured, PREMIUM_UNIT_AMOUNT } from "@/lib/stripe
 export const runtime = "nodejs";
 
 /**
- * Creates a Stripe Checkout Session for the OmniTools Premium subscription and
+ * Creates a Stripe Checkout Session for the FreeTools Premium subscription and
  * returns its URL. Uses inline price_data so no Stripe dashboard product setup
  * is required to test. In TEST mode, complete it with card 4242 4242 4242 4242.
  *
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
           quantity: 1,
           price_data: {
             currency: "usd",
-            product_data: { name: "OmniTools Premium" },
+            product_data: { name: "FreeTools Premium" },
             unit_amount: PREMIUM_UNIT_AMOUNT[billing],
             recurring: { interval: billing === "yearly" ? "year" : "month" },
           },

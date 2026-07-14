@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Change Pitch free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Do you upload my audio to a server?",

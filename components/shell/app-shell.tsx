@@ -20,11 +20,11 @@ import { cn } from "@/lib/utils";
 
 function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <Link href="/" className="flex items-center gap-2 px-2" aria-label="OmniTools home">
+    <Link href="/" className="flex items-center gap-2 px-2" aria-label="FreeTools home">
       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-accent text-accent-foreground">
         <Wrench className="h-4 w-4" aria-hidden />
       </span>
-      {!compact && <span className="text-sm font-semibold tracking-tight">OmniTools</span>}
+      {!compact && <span className="text-sm font-semibold tracking-tight">FreeTools</span>}
     </Link>
   );
 }

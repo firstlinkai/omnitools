@@ -17,7 +17,7 @@ export function PricingClient() {
       <div className="text-center">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Pricing</h1>
         <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-muted-foreground">
-          OmniTools is free. All of it. Forever.
+          FreeTools is free. All of it. Forever.
         </p>
       </div>
 

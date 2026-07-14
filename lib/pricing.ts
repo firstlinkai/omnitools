@@ -1,7 +1,7 @@
 /**
  * Single source of truth for the Pricing page.
  *
- * IMPORTANT / honesty note: OmniTools is 100% client-side, so the Free tier is
+ * IMPORTANT / honesty note: FreeTools is 100% client-side, so the Free tier is
  * genuinely unlimited — no per-day limits, no file-size caps, no ads. There is
  * no backend yet, so Premium is a ROADMAP tier: its features are marked
  * `soon: true` and it is not purchasable (the page shows a waitlist, not a

@@ -7,8 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "OmniTools · Privacy-first web utilities",
-    template: "%s · OmniTools",
+    default: "FreeTools · Privacy-first web utilities",
+    template: "%s · FreeTools",
   },
   description:
     "17 free developer, design, media, and productivity tools that run entirely in your browser. Your data never leaves your device.",

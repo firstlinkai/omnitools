@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is PNG to PDF free?",
-      a: "Yes. It's completely free — no account, no watermark, and no sign-up, like every OmniTools tool.",
+      a: "Yes. It's completely free — no account, no watermark, and no sign-up, like every FreeTools tool.",
     },
     {
       q: "Are my images uploaded to a server?",

@@ -24,7 +24,7 @@ const content: ToolContent = {
   useCases: [
     "Convert a MOV or MKV file to MP4 for wide device compatibility",
     "Turn a clip into WebM for lighter, web-friendly playback",
-    "Repackage footage into MP4 before using another OmniTools video tool",
+    "Repackage footage into MP4 before using another FreeTools video tool",
     "Change an incompatible file into a format your editor or player accepts",
     "Standardize a mix of clips to a single container and codec",
     "Get an H.264 MP4 from a format that won't play on a target device",
@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Video Converter free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Do you upload my video to a server?",

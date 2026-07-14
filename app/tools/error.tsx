@@ -23,7 +23,7 @@ export default function ToolError({
       <div>
         <h1 className="text-lg font-semibold">This tool hit an error</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          The rest of OmniTools is unaffected. You can retry this tool or head back
+          The rest of FreeTools is unaffected. You can retry this tool or head back
           to the dashboard.
         </p>
         {error?.message && (

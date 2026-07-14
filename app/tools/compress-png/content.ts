@@ -36,7 +36,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Compress PNG free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Is my image uploaded anywhere?",

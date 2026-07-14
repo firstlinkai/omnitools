@@ -10,7 +10,7 @@ import { Select } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { downloadText, formatBytes } from "@/lib/download";
 
-const SAMPLE = `{"name":"OmniTools","version":2,"private":true,"features":["json","yaml","regex"],"limits":{"maxDepth":32,"maxBytes":1048576},"maintainer":null,"stable":false,"score":9.75}`;
+const SAMPLE = `{"name":"FreeTools","version":2,"private":true,"features":["json","yaml","regex"],"limits":{"maxDepth":32,"maxBytes":1048576},"maintainer":null,"stable":false,"score":9.75}`;
 
 type IndentChoice = "2" | "4" | "tab" | "min";
 

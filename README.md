@@ -1,4 +1,4 @@
-# OmniTools
+# FreeTools
 
 A privacy-first, all-in-one web utility suite. 17 tools for developers, designers, and everyday work, running **100% client-side**: nothing you paste, drop, or upload ever leaves your browser.
 

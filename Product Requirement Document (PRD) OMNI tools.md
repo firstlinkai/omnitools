@@ -1,14 +1,14 @@
 # **Product Requirement Document (PRD)**
 
-## **Project: OmniTools (The Swiss Army Knife Web Utility Suite)**
+## **Project: FreeTools (The Swiss Army Knife Web Utility Suite)**
 
 **Status:** Draft | **Target Launch:** Phase-Based (2026)
 
 ## **1\. Executive Summary & Vision**
 
-OmniTools is an all-in-one, privacy-first web utility platform that provides a comprehensive suite of free digital tools for developers, designers, content creators, and general internet users.
+FreeTools is an all-in-one, privacy-first web utility platform that provides a comprehensive suite of free digital tools for developers, designers, content creators, and general internet users.
 
-Instead of forcing users to bookmark dozens of single-purpose websites (many of which are bloated with ads and tracking scripts), OmniTools bundles file manipulation, text processing, formatting, and productivity tools under **one clean, fast, unified dashboard**.
+Instead of forcing users to bookmark dozens of single-purpose websites (many of which are bloated with ads and tracking scripts), FreeTools bundles file manipulation, text processing, formatting, and productivity tools under **one clean, fast, unified dashboard**.
 
 ### **Core Philosophies:**
 

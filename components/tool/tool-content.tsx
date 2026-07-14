@@ -76,8 +76,8 @@ function RelatedTools({ tool }: { tool: ToolDef }) {
 
 /**
  * Long-form content rendered beneath a tool: what it does, how to use it,
- * common uses, why OmniTools, FAQs, and related tools. 123apps-style structure,
- * OmniTools design system.
+ * common uses, why FreeTools, FAQs, and related tools. 123apps-style structure,
+ * FreeTools design system.
  */
 export function ToolContentSections({
   tool,
@@ -138,9 +138,9 @@ export function ToolContentSections({
         </section>
       )}
 
-      {/* Why OmniTools */}
+      {/* Why FreeTools */}
       <section>
-        <h2 className="text-lg font-semibold tracking-tight">Why choose OmniTools</h2>
+        <h2 className="text-lg font-semibold tracking-tight">Why choose FreeTools</h2>
         <div className="mt-5 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
           {WHY.map(({ icon: Icon, title, body }) => (
             <div key={title} className="flex flex-col gap-1.5">

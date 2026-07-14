@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Unlock PDF free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Is my PDF or password sent to a server?",

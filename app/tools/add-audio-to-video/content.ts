@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Add Audio to Video free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Do you upload my files to a server?",

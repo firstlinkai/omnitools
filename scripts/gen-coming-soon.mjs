@@ -42,7 +42,7 @@ const SLUG = "${slug}";
 const tool = getTool(SLUG);
 
 export const metadata: Metadata = {
-  title: tool?.name ?? "OmniTools",
+  title: tool?.name ?? "FreeTools",
   description: tool ? \`\${tool.description} 100% in your browser — no uploads.\` : undefined,
 };
 

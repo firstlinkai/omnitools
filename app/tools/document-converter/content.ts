@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Document Converter free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Is my document uploaded anywhere?",

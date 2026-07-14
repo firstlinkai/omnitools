@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is PDF to Word free?",
-      a: "Yes. Like every OmniTools tool it is completely free — no account, no watermark, and no sign-up.",
+      a: "Yes. Like every FreeTools tool it is completely free — no account, no watermark, and no sign-up.",
     },
     {
       q: "Does my PDF get uploaded to a server?",

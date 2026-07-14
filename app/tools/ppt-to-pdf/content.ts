@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is PPT to PDF free?",
-      a: "Yes — free with no account, no watermark, and no sign-up, like every OmniTools tool.",
+      a: "Yes — free with no account, no watermark, and no sign-up, like every FreeTools tool.",
     },
     {
       q: "Is my presentation uploaded?",

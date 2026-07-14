@@ -32,7 +32,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Excel to PDF free?",
-      a: "Yes. It's completely free — no account, no watermark, and no sign-up, like all OmniTools tools.",
+      a: "Yes. It's completely free — no account, no watermark, and no sign-up, like all FreeTools tools.",
     },
     {
       q: "Does my spreadsheet get uploaded?",

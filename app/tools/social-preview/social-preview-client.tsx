@@ -23,7 +23,7 @@ const TITLE_LIMIT = 60;
 const DESC_LIMIT = 160;
 
 const DEFAULTS = {
-  title: "OmniTools, free private browser utilities",
+  title: "FreeTools, free private browser utilities",
   description:
     "Format JSON, generate SVG waves, build CSS animations, and more. Every tool runs entirely in your browser. No uploads, no tracking, no signup.",
   url: "https://omnitools.app/tools",

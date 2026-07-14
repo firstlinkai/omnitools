@@ -55,7 +55,7 @@ export default function DashboardPage() {
       </div>
 
       <p className="mt-16 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        OmniTools is free and fully client-side. Press Ctrl K to jump to any tool.
+        FreeTools is free and fully client-side. Press Ctrl K to jump to any tool.
       </p>
     </div>
   );

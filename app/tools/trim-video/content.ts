@@ -32,11 +32,11 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Trim Video free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Do you upload my video to a server?",
-      a: "No. Trimming runs entirely in your browser using WebAssembly FFmpeg, so your file never leaves your device. That is the whole point of OmniTools.",
+      a: "No. Trimming runs entirely in your browser using WebAssembly FFmpeg, so your file never leaves your device. That is the whole point of FreeTools.",
     },
     {
       q: "Which video formats can I trim?",

@@ -32,11 +32,11 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is Audio Converter free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Are my files uploaded to a server?",
-      a: "No. Conversion runs entirely in your browser with WebAssembly FFmpeg, so your audio never leaves your device. That's the whole point of OmniTools.",
+      a: "No. Conversion runs entirely in your browser with WebAssembly FFmpeg, so your audio never leaves your device. That's the whole point of FreeTools.",
     },
     {
       q: "Which formats can I convert to?",

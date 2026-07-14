@@ -280,7 +280,7 @@ export function FlashcardsClient() {
             </div>
             {aiNote && (
               <p className="mt-3 text-xs text-muted-foreground">
-                AI generation arrives in Phase 2. OmniTools stays fully offline until then.
+                AI generation arrives in Phase 2. FreeTools stays fully offline until then.
               </p>
             )}
           </Panel>

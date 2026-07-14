@@ -36,7 +36,7 @@ const content: ToolContent = {
   faqs: [
     {
       q: "Is the Invoice Generator free?",
-      a: "Yes. Every OmniTools tool is completely free — no account, no watermark, and no sign-up required.",
+      a: "Yes. Every FreeTools tool is completely free — no account, no watermark, and no sign-up required.",
     },
     {
       q: "Is my invoice or client data uploaded anywhere?",
