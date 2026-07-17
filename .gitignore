@@ -33,3 +33,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# Untracked Capacitor/Android sibling project (its own git repo)
+/Omni Tools Android App/
