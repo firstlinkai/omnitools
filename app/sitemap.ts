@@ -11,8 +11,11 @@ const BASE = "https://www.freetools.click";
  * to the sitemap automatically, with no edits here.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  // One timestamp shared by every entry so the whole sitemap moves together.
-  const lastModified = new Date();
+  // One date shared by every entry so the whole sitemap moves together.
+  // Date-only (YYYY-MM-DD) is the most widely-accepted <lastmod> format —
+  // a full timestamp with milliseconds is valid ISO 8601 but some crawlers
+  // are pickier about it.
+  const lastModified = new Date().toISOString().split("T")[0];
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
