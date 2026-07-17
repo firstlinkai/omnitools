@@ -26,7 +26,7 @@ const DEFAULTS = {
   title: "FreeTools, free private browser utilities",
   description:
     "Format JSON, generate SVG waves, build CSS animations, and more. Every tool runs entirely in your browser. No uploads, no tracking, no signup.",
-  url: "https://omnitools.app/tools",
+  url: "https://www.freetools.click/tools",
 };
 
 /** Draw a simple 1200x630 gradient placeholder entirely on a local canvas. */

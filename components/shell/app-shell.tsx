@@ -16,6 +16,7 @@ import { SidebarNav } from "./sidebar-nav";
 import { CommandSearch } from "./command-search";
 import { ThemeToggle } from "./theme-toggle";
 import { PrivacyBadge } from "./privacy-badge";
+import { SiteFooter } from "./site-footer";
 import { cn } from "@/lib/utils";
 
 function Logo({ compact = false }: { compact?: boolean }) {
@@ -181,9 +182,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
         <main className="min-w-0 flex-1">{children}</main>
 
-        <footer className="border-t border-border px-4 py-3 md:hidden">
-          <PrivacyBadge />
-        </footer>
+        <SiteFooter />
       </div>
 
       <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
