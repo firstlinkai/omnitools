@@ -833,7 +833,6 @@ export const TOOLS: ToolDef[] = [
     category: "PDF & Documents",
     icon: FileX,
     keywords: ["pdf", "delete", "remove", "pages", "trim"],
-    status: "soon",
     engine: "pdf-lib & pdfjs-dist",
     wireframe: [
       "Upload a PDF and preview every page as a thumbnail",
@@ -848,7 +847,6 @@ export const TOOLS: ToolDef[] = [
     category: "PDF & Documents",
     icon: ListOrdered,
     keywords: ["pdf", "reorder", "rearrange", "pages", "organize"],
-    status: "soon",
     engine: "pdf-lib & pdfjs-dist",
     wireframe: [
       "Upload a PDF; pages appear as draggable thumbnails",
@@ -863,7 +861,6 @@ export const TOOLS: ToolDef[] = [
     category: "PDF & Documents",
     icon: ScanText,
     keywords: ["pdf", "text", "extract", "copy", "content"],
-    status: "soon",
     engine: "pdfjs-dist",
     wireframe: [
       "Upload a PDF",
@@ -878,7 +875,6 @@ export const TOOLS: ToolDef[] = [
     category: "PDF & Documents",
     icon: Images,
     keywords: ["pdf", "images", "extract", "save", "pictures"],
-    status: "soon",
     engine: "pdfjs-dist",
     wireframe: [
       "Upload a PDF",
@@ -893,7 +889,6 @@ export const TOOLS: ToolDef[] = [
     category: "PDF & Documents",
     icon: Stamp,
     keywords: ["pdf", "watermark", "stamp", "brand", "overlay"],
-    status: "soon",
     engine: "pdf-lib",
     wireframe: [
       "Upload a PDF and type your watermark text",
@@ -908,7 +903,6 @@ export const TOOLS: ToolDef[] = [
     category: "Video",
     icon: Film,
     keywords: ["video", "gif", "animation", "convert", "loop"],
-    status: "soon",
     engine: "FFmpeg (WebAssembly)",
     wireframe: [
       "Upload a clip and choose start, end and frame rate",
@@ -923,7 +917,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio",
     icon: Blend,
     keywords: ["audio", "mixer", "combine", "layer", "tracks"],
-    status: "soon",
     engine: "Web Audio API",
     wireframe: [
       "Add two or more audio files",
@@ -938,7 +931,6 @@ export const TOOLS: ToolDef[] = [
     category: "Audio",
     icon: Timer,
     keywords: ["metronome", "tempo", "bpm", "beat", "practice"],
-    status: "soon",
     engine: "Web Audio API",
     wireframe: [
       "Set the tempo (BPM) and time signature",
@@ -953,7 +945,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Crop,
     keywords: ["image", "crop", "cut", "trim", "aspect"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image and drag a crop box over it",
@@ -968,7 +959,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Scaling,
     keywords: ["image", "resize", "scale", "dimensions", "pixels"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image",
@@ -983,7 +973,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Pipette,
     keywords: ["color", "picker", "eyedropper", "hex", "rgb"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image onto the canvas",
@@ -998,7 +987,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Palette,
     keywords: ["color", "convert", "hex", "rgb", "hsl"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Enter a color in any format",
@@ -1013,7 +1001,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: FileImage,
     keywords: ["svg", "png", "convert", "rasterize", "export"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop or paste an SVG",
@@ -1028,7 +1015,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Eraser,
     keywords: ["exif", "metadata", "privacy", "strip", "remove"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop a JPEG or PNG photo",
@@ -1043,7 +1029,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Contrast,
     keywords: ["image", "invert", "negative", "colors", "filter"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image",
@@ -1058,7 +1043,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Focus,
     keywords: ["image", "sharpen", "filter", "detail", "enhance"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image",
@@ -1073,7 +1057,6 @@ export const TOOLS: ToolDef[] = [
     category: "Image Tools",
     icon: Droplet,
     keywords: ["image", "grayscale", "black", "white", "filter"],
-    status: "soon",
     engine: "HTML5 Canvas",
     wireframe: [
       "Drop an image",
@@ -1088,7 +1071,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Minimize2,
     keywords: ["json", "minify", "compress", "compact", "whitespace"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste JSON",
@@ -1103,7 +1085,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Table,
     keywords: ["json", "csv", "convert", "table", "data"],
-    status: "soon",
     engine: "papaparse",
     wireframe: [
       "Paste JSON (or CSV)",
@@ -1118,7 +1099,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Binary,
     keywords: ["base64", "encode", "decode", "text"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste text or Base64",
@@ -1133,7 +1113,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Link,
     keywords: ["url", "encode", "decode", "percent", "uri"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste a string or an encoded URL",
@@ -1148,7 +1127,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: CodeXml,
     keywords: ["html", "entities", "encode", "decode", "escape"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste text or HTML entities",
@@ -1163,7 +1141,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: FileText,
     keywords: ["markdown", "preview", "render", "html", "md"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Type or paste Markdown on the left",
@@ -1178,7 +1155,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: KeyRound,
     keywords: ["jwt", "token", "decode", "debug", "auth"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste a JWT",
@@ -1193,7 +1169,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: FileCode2,
     keywords: ["xml", "json", "convert", "parse", "data"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste XML",
@@ -1208,7 +1183,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Database,
     keywords: ["sql", "format", "beautify", "pretty", "query"],
-    status: "soon",
     engine: "sql-formatter",
     wireframe: [
       "Paste a SQL query",
@@ -1223,7 +1197,6 @@ export const TOOLS: ToolDef[] = [
     category: "Developer & Data",
     icon: Clock,
     keywords: ["unix", "timestamp", "epoch", "date", "time"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Enter a Unix timestamp or a date",
@@ -1238,7 +1211,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: CaseSensitive,
     keywords: ["case", "uppercase", "lowercase", "title", "camel"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste your text",
@@ -1253,7 +1225,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: WholeWord,
     keywords: ["word", "count", "character", "text", "length"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste or type your text",
@@ -1268,7 +1239,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: GitCompare,
     keywords: ["diff", "compare", "text", "changes", "difference"],
-    status: "soon",
     engine: "diff",
     wireframe: [
       "Paste the original text and the changed text",
@@ -1283,7 +1253,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: Pilcrow,
     keywords: ["lorem", "ipsum", "placeholder", "dummy", "text"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Choose paragraphs, sentences or words",
@@ -1298,7 +1267,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: Link2,
     keywords: ["slug", "url", "seo", "permalink", "friendly"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste a title or phrase",
@@ -1313,7 +1281,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: Replace,
     keywords: ["find", "replace", "text", "regex", "substitute"],
-    status: "soon",
     engine: "Browser core APIs",
     wireframe: [
       "Paste your text",
@@ -1328,7 +1295,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: Hash,
     keywords: ["sha256", "hash", "checksum", "crypto", "digest"],
-    status: "soon",
     engine: "Web Crypto API",
     wireframe: [
       "Paste your text",
@@ -1343,7 +1309,6 @@ export const TOOLS: ToolDef[] = [
     category: "Text Tools",
     icon: Fingerprint,
     keywords: ["md5", "hash", "checksum", "digest"],
-    status: "soon",
     engine: "spark-md5",
     wireframe: [
       "Paste your text",
@@ -1358,7 +1323,6 @@ export const TOOLS: ToolDef[] = [
     category: "Generators",
     icon: Key,
     keywords: ["password", "generate", "random", "secure", "strong"],
-    status: "soon",
     engine: "Web Crypto API",
     wireframe: [
       "Choose length and character sets",
@@ -1373,7 +1337,6 @@ export const TOOLS: ToolDef[] = [
     category: "Generators",
     icon: Dices,
     keywords: ["uuid", "guid", "generate", "random", "id"],
-    status: "soon",
     engine: "Web Crypto API",
     wireframe: [
       "Pick how many UUIDs you need",
@@ -1388,7 +1351,6 @@ export const TOOLS: ToolDef[] = [
     category: "Generators",
     icon: QrCode,
     keywords: ["qr", "code", "generate", "url", "scan"],
-    status: "soon",
     engine: "qrcode",
     wireframe: [
       "Enter a URL or text",
@@ -1403,7 +1365,6 @@ export const TOOLS: ToolDef[] = [
     category: "Generators",
     icon: Barcode,
     keywords: ["barcode", "generate", "code128", "ean", "upc"],
-    status: "soon",
     engine: "jsbarcode",
     wireframe: [
       "Enter the value and pick a barcode type",
@@ -1418,7 +1379,6 @@ export const TOOLS: ToolDef[] = [
     category: "Generators",
     icon: ScanLine,
     keywords: ["qr", "scan", "read", "decode", "image"],
-    status: "soon",
     engine: "jsQR",
     wireframe: [
       "Drop an image containing a QR code",
