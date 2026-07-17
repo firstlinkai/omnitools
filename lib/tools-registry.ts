@@ -450,14 +450,8 @@ export const TOOLS: ToolDef[] = [
     description: "Add a password and encryption to keep a PDF private.",
     category: "Advanced PDF & Document Management",
     icon: FileLock2,
-    keywords: ["pdf", "protect", "password", "encrypt", "secure", "lock"],
-    status: "soon",
-    engine: "pdf-lib & pdfjs-dist",
-    wireframe: [
-      "Upload a PDF and set a password",
-      "The document is encrypted entirely in the browser",
-      "Download the protected PDF",
-    ],
+    keywords: ["pdf", "protect", "password", "encrypt", "secure", "lock", "aes"],
+    engine: "@cantoo/pdf-lib (AES-256)",
   },
   {
     slug: "rotate-pdf",
