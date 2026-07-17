@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import { Github, ShieldCheck } from "lucide-react";
+
+const GITHUB_URL = "https://github.com/firstlinkai/omnitools";
 
 /** Site-wide footer with the legal links. */
 export function SiteFooter() {
@@ -42,6 +44,15 @@ export function SiteFooter() {
             className="text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             Contact
+          </a>
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Github className="h-3.5 w-3.5 shrink-0" aria-hidden />
+            GitHub
           </a>
         </nav>
       </div>
