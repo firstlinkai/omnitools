@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/legal-page";
+import { LIVE_TOOL_COUNT } from "@/lib/tools-registry";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -36,7 +37,7 @@ export default function Page() {
       <h2>2. Your files never leave your device</h2>
       <p>This is the most important thing on this page, so it goes first.</p>
       <p>
-        All 60 tools on FreeTools run <strong>100% inside your own browser</strong>, using
+        All {LIVE_TOOL_COUNT} tools on FreeTools run <strong>100% inside your own browser</strong>, using
         WebAssembly, HTML5 Canvas, and the Web Audio API. Your videos, audio, PDFs, images,
         documents, and text are opened, processed, and downloaded entirely on your own device.
       </p>

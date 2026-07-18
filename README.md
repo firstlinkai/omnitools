@@ -2,7 +2,7 @@
 
 # 🛠️ FreeTools
 
-### The privacy-first, all-in-one web utility suite — **60 tools that run 100% in your browser.**
+### The privacy-first, all-in-one web utility suite — **100 tools that run 100% in your browser.**
 
 **Nothing you drop here ever leaves your device.** No uploads, no accounts, no ads, no tracking cookies. Just open a tool and go.
 
@@ -33,42 +33,60 @@ This isn't a marketing claim you have to take on faith — it's how the code phy
 
 ---
 
-## 🧰 The 60 tools
+## 🧰 The 100 tools
 
 <details open>
-<summary><b>🎬 Media &amp; Video Studio</b> — powered by FFmpeg (WebAssembly)</summary>
+<summary><b>🎬 Video</b> (15) — powered by FFmpeg (WebAssembly)</summary>
 
-Trim Video · Merge Videos · Crop Video · Rotate Video · Flip Video · Resize Video · Loop Video · Change Video Volume · Change Video Speed · Add Audio to Video · Add Image to Video · Add Text to Video · Video Converter (MP4/WebM/MOV/MKV)
+Trim Video · Merge Videos · Crop Video · Rotate Video · Flip Video · Resize Video · Loop Video · Change Video Volume · Change Video Speed · Add Audio to Video · Add Image to Video · Add Text to Video · Video Converter (MP4/WebM/MOV/MKV) · Change GIF Speed · **Video to GIF**
 </details>
 
 <details open>
-<summary><b>🎧 Audio Processing Laboratory</b> — Web Audio API + FFmpeg</summary>
+<summary><b>🎧 Audio</b> (10) — Web Audio API + FFmpeg</summary>
 
-Trim Audio · Change Volume · Change Speed · Change Pitch · 5-band Equalizer · Reverse Audio · Audio Joiner
+Trim Audio · Change Volume · Change Speed · Change Pitch · 5-band Equalizer · Reverse Audio · Audio Joiner · Audio Converter (MP3/WAV/OGG/M4A) · **Audio Mixer** · **Metronome**
 </details>
 
 <details open>
-<summary><b>🎥 Capture Recorders</b> — the browser's MediaRecorder API</summary>
+<summary><b>🎥 Screen &amp; Recording</b> (3) — the browser's MediaRecorder API</summary>
 
 Screen Recorder (with mic, system audio &amp; webcam overlay) · Video Recorder · Voice Recorder (with live waveform)
 </details>
 
 <details open>
-<summary><b>📄 Advanced PDF &amp; Document Management</b> — pdf-lib + pdf.js</summary>
+<summary><b>📄 PDF &amp; Documents</b> (22) — pdf-lib + pdf.js</summary>
 
-Split PDF · Merge PDF · Compress PDF · Unlock PDF · **Protect PDF (real AES-256 encryption)** · Rotate PDF · Add Page Numbers · PDF → Word · PDF → Excel · PDF → JPG · PDF → PNG · PDF → HTML · Word → PDF · Excel → PDF · PPT → PDF · PNG → PDF · JPG → PDF
+Split PDF · Merge PDF · Compress PDF · Unlock PDF · **Protect PDF (real AES-256 encryption)** · Rotate PDF · Add Page Numbers · PDF → Word · PDF → Excel · PDF → JPG · PDF → PNG · PDF → HTML · Word → PDF · Excel → PDF · PPT → PDF · PNG → PDF · JPG → PDF · **Delete PDF Pages** · **Reorder PDF Pages** · **Extract Text from PDF** · **Extract Images from PDF** · **Watermark PDF**
 </details>
 
 <details open>
-<summary><b>🔄 Format Transformers &amp; Converters</b></summary>
+<summary><b>🖼️ Image Tools</b> (14) — HTML5 Canvas</summary>
 
-Audio Converter (MP3/WAV/OGG/M4A) · Image Converter (PNG/JPEG/WebP) · Document Converter (Markdown/HTML/Plain text)
+Image Converter (PNG/JPEG/WebP) · Privacy-First Blur/Redact Tool · Compress PNG · Compress Image Size · Image Format Converter · **Image Cropper** · **Resize Image** · **Color Picker** · **Color Converter** · **SVG → PNG** · **EXIF Remover** · **Invert Colors** · **Sharpen Image** · **Grayscale Converter**
 </details>
 
 <details open>
-<summary><b>⚡ Everyday Utilities</b></summary>
+<summary><b>⚙️ Developer &amp; Data</b> (15)</summary>
 
-Prettify JSON · Sort a List · Calculate Number Sum · Smart Format Converter (JSON/YAML/CSV/Markdown) · RegEx Tester · Split a Text · Readability Analyzer · Flashcard Studio · Invoice Generator (→ PDF) · SVG Shape &amp; Wave Generator · Social Media Preview · CSS Keyframe Builder · Privacy-First Blur/Redact Tool · Compress PNG · Compress Image Size · Image Format Converter · Change GIF Speed
+Prettify JSON · Calculate Number Sum · Smart Format Converter (JSON/YAML/CSV/Markdown) · RegEx Tester · Document Converter (Markdown/HTML/Plain text) · **JSON Minifier** · **JSON ↔ CSV** · **Base64 Encode/Decode** · **URL Encoder/Decoder** · **HTML Entity Encoder** · **Markdown Preview** · **JWT Debugger** · **XML → JSON** · **SQL Formatter** · **Unix Timestamp Converter**
+</details>
+
+<details open>
+<summary><b>📝 Text Tools</b> (11)</summary>
+
+Sort a List · Split a Text · Readability Analyzer · **Case Converter** · **Word &amp; Character Counter** · **Diff Checker** · **Lorem Ipsum Generator** · **Slug Generator** · **Find &amp; Replace** · **SHA-256 Hash** · **MD5 Hash**
+</details>
+
+<details open>
+<summary><b>🎲 Generators</b> (5)</summary>
+
+**Password Generator** · **UUID Generator** · **QR Code Generator** · **Barcode Generator** · **QR Code Scanner**
+</details>
+
+<details open>
+<summary><b>🎨 Design &amp; Productivity</b> (5)</summary>
+
+Flashcard Studio · Invoice Generator (→ PDF) · SVG Shape &amp; Wave Generator · Social Media Preview · CSS Keyframe Builder
 </details>
 
 Every tool page also includes a plain-English **"What is / How to use / Common uses / FAQ"** write-up.
@@ -84,8 +102,12 @@ FreeTools proves you can build a genuinely useful, feature-rich utility suite wi
 - **Office file parsing** (docx/xlsx/pptx) → [`JSZip`](https://stuk.github.io/jszip/) to read the OOXML, then `pdf-lib` to lay it out.
 - **Audio DSP** → the native **Web Audio API** (`OfflineAudioContext`, `BiquadFilter` nodes) with a hand-written 16-bit PCM WAV encoder.
 - **Recording** → `navigator.mediaDevices` + **`MediaRecorder`**.
-- **Image editing** → **HTML5 Canvas** (`toBlob`, `getImageData`).
+- **Image editing** → **HTML5 Canvas** (`toBlob`, `getImageData`) — crop, resize, convolution filters, pixel picking, and metadata stripping by re-encode.
+- **Hashing & randomness** → the native **Web Crypto API** (`crypto.subtle.digest` for SHA-256, `getRandomValues` / `randomUUID` for passwords and UUIDs).
+- **Codes** → `qrcode` + `jsbarcode` to generate, `jsqr` to decode a QR from an uploaded image.
 - **Social share images** → dynamic per-tool Open Graph banners via `next/og`.
+
+Two shared shells keep the tool code small: a **text shell** (`components/tool/text-transform-tool.tsx`) that gives any string-to-string tool its input/output panes, live recompute, error surface, copy and download; and an **image shell** (`image-canvas-tool.tsx`) that handles the drop zone, canvas preview, live re-render and export. Most text and image tools are just a `transform()` or `process()` function plus a few controls.
 
 The result: **the only network request in the whole app is the one-time FFmpeg engine download** (from a public CDN) the first time you use a video/audio tool. Everything else is local.
 
@@ -139,7 +161,9 @@ Navigation, search, the dashboard, the sitemap, and the share image are all wire
 
 Next.js 15 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4 · `next-themes` (dark/light) · Lucide icons · Geist font · Vercel Web Analytics (cookieless).
 
-**Client-side engines:** `@ffmpeg/ffmpeg`, `pdf-lib`, `@cantoo/pdf-lib`, `pdfjs-dist`, `jszip`, `browser-image-compression`, `gifuct-js` + `gifenc`, `papaparse`, `js-yaml`.
+**Client-side engines:** `@ffmpeg/ffmpeg`, `pdf-lib`, `@cantoo/pdf-lib`, `pdfjs-dist`, `jszip`, `browser-image-compression`, `gifuct-js` + `gifenc`, `papaparse`, `js-yaml`, `qrcode`, `jsqr`, `jsbarcode`, `sql-formatter`, `marked`, `diff`, `spark-md5`.
+
+Every heavy library is **dynamically imported inside the tool that needs it**, so opening the site doesn't download engines you never use.
 
 ---
 

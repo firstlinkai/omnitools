@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/legal-page";
+import { LIVE_TOOL_COUNT } from "@/lib/tools-registry";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
@@ -30,7 +31,7 @@ export default function Page() {
 
       <h2>2. The Service</h2>
       <p>
-        FreeTools provides around 60 utilities for working with video, audio, PDF and other
+        FreeTools provides {LIVE_TOOL_COUNT} utilities for working with video, audio, PDF and other
         documents, images, and text. Every tool runs on your own device, in your own browser,
         using technologies such as WebAssembly, HTML5 Canvas and the Web Audio API. Your files
         are not uploaded to us.
