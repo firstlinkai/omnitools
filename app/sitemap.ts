@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${BASE}/download`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE}/pricing`,
       lastModified,
       changeFrequency: "monthly",

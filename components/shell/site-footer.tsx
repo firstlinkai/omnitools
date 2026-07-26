@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, ShieldCheck } from "lucide-react";
+import { Github, ShieldCheck, Smartphone } from "lucide-react";
 
 const GITHUB_URL = "https://github.com/firstlinkai/omnitools";
 
@@ -21,6 +21,13 @@ export function SiteFooter() {
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <Link
+            href="/download"
+            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Smartphone className="h-3.5 w-3.5 shrink-0" aria-hidden />
+            Android app
+          </Link>
           <Link
             href="/pricing"
             className="text-xs text-muted-foreground transition-colors hover:text-foreground"

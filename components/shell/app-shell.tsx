@@ -7,6 +7,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   Search,
+  Smartphone,
   Tag,
   Wrench,
   X,
@@ -176,6 +177,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
           <div className="ml-auto flex items-center gap-2">
             <PrivacyBadge className="hidden md:inline-flex" />
+            <Link
+              href="/download"
+              title="Download the Android app"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-xs font-medium text-foreground transition-colors hover:bg-muted sm:px-3"
+            >
+              <Smartphone className="h-4 w-4 shrink-0" aria-hidden />
+              <span className="hidden sm:inline">Get the app</span>
+            </Link>
             <ThemeToggle />
           </div>
         </header>
