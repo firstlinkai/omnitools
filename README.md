@@ -18,6 +18,8 @@
 
 Most "free online tools" (converters, compressors, PDF editors) work by **uploading your files to their servers**. That means your documents, videos, and photos leave your device — and you have to trust them not to store, read, or leak them.
 
+[![FreeTools on StartupScores](https://startupscores.com/badge/freetools.svg?style=shield&v=combo&theme=dark)](https://startupscores.com/open-source/freetools)
+
 **FreeTools does the opposite.** Every tool runs entirely inside your web browser using modern web standards (WebAssembly, HTML5 Canvas, the Web Audio API, and the File API). Your files are opened, processed, and downloaded **on your own machine**. There is no upload endpoint. There is no server that ever sees your data.
 
 | | Typical online tools | **FreeTools** |
